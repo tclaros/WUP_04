@@ -81,5 +81,6 @@ plot(TukeyHSD(model1),las=2)
 Based on the graph, there is a difference between High School Graduate and also between Less than High School and Graduate. This is because those levels do not cross or touch the zero.  
   
 # Discussion and Conclusion
-
+   
+Our original question was: Is there a difference in average score on the WORDSUM test and level of schooling? The $H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE  and the $H_a$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE. Based off of our numerical descriptive results and our inferential results; we can see that the there is a difference of the average score. The p-value is 0.00023 and since it is less than 0.05 we reject the null hypothesis.      
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
