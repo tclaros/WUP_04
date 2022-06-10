@@ -1,7 +1,7 @@
 ---
 title: "WUP_04"
-author: "Put your name here!"
-date: "fall 2020"
+author: "Tanya Claros"
+date: "Summer 2022"
 output:
   html_document:
     df_print: paged
@@ -11,7 +11,7 @@ output:
 require(knitr)
 require(tidyverse)
 require(tigerstats)
-
+require(mosaic)
 ```
 
 # Introduction
@@ -26,20 +26,36 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+```{r}
+GSSDataFrame=read.csv("GSScsv.csv")
+```
+WORDSUM is Numerical variable, DEGREE is a Categorical variable. 
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+
 
 ## Descriptive Results
 
 ### Graphical Descriptive Results
 
+```{r}
+boxplot(WORDSUM~DEGREE,data=GSSDataFrame)
+```
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+  
+From the box plot it appears that students that have less than High School have a median less than that of students in High School and with a Bachelor's.   
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+favstats(WORDSUM~DEGREE,data=GSSDataFrame)
+```
+  
+  
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
